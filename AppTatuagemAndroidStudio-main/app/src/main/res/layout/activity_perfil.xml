@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 3 LinearLayouts com tamanho igual (peso 1 cada) -->
+    <LinearLayout
+        android:id="@+id/layout_top1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/side_gradient" >
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo"
+            android:background="@drawable/circle_mask"
+            />
+
+        <!-- Nome abaixo da imagem -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Studio DUDU TATOO"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Realismo | Pontilismo | Aquarela"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_top2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4.9"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="45px"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="450+"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="45px"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="São Paulo, SP"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="45px"
+                android:gravity="center"
+                android:padding="8dp"/>
+        </LinearLayout>
+        <!-- NOVO LinearLayout: Rótulos abaixo dos valores -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Avaliação"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Trabalhos"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Localização"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+
+        <!-- TextView que pega toda a largura abaixo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apaixonado por arte e pele, transformando ideias em tatuagens duradouras. Especializado em realismo e designs personalizados."
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:paddingTop="30px"/>
+
+        <!-- Dois botões lado a lado abaixo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="12px">
+
+            <LinearLayout
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/btnChat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/botao_arredondado"
+                android:backgroundTint="#000000"
+                android:padding="12dp"
+                android:layout_marginEnd="10dp"
+                tools:ignore="DuplicateIds">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/person_24dp_e3e3e3_fill0_wght400_grad0_opsz24"
+                    android:tint="#FFFFFF"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnAgendar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/botao_arredondado"
+                android:backgroundTint="#FFD700"
+                android:padding="12dp"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                tools:ignore="DuplicateIds">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/event_24dp_e3e3e3_fill0_wght400_grad0_opsz24"
+                    android:tint="#000"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agendar"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_top3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#FFF" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Portfólio"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:paddingBottom="16dp"/>
+
+                <GridLayout
+                    android:id="@+id/portfolioGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:alignmentMode="alignMargins"
+                    android:useDefaultMargins="true">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_columnWeight="1"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rounded_image"
+                        android:clipToOutline="true"
+                        android:src="@drawable/aquarela"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_columnWeight="1"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rounded_image"
+                        android:clipToOutline="true"
+                        android:src="@drawable/lettering"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_columnWeight="1"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rounded_image"
+                        android:clipToOutline="true"
+                        android:src="@drawable/realismo"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_columnWeight="1"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rounded_image"
+                        android:clipToOutline="true"
+                        android:src="@drawable/minimalismo"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_columnWeight="1"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rounded_image"
+                        android:clipToOutline="true"
+                        android:src="@drawable/geek"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_columnWeight="1"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rounded_image"
+                        android:clipToOutline="true"
+                        android:src="@drawable/oldschool"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_columnWeight="1"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rounded_image"
+                        android:clipToOutline="true"
+                        android:src="@drawable/pontilhismo"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_columnWeight="1"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rounded_image"
+                        android:clipToOutline="true"
+                        android:src="@drawable/oriental"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_columnWeight="1"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rounded_image"
+                        android:clipToOutline="true"
+                        android:src="@drawable/single_line"/>
+                </GridLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!-- LinearLayout de botões com altura fixa -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:background="#F8F8F8"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/home_24dp_e3e3e3_fill0_wght400_grad0_opsz24"
+            android:gravity="center"
+            android:text="Home"
+            android:textSize="12sp"
+            android:backgroundTint="#F8F8F8"
+            android:drawableTint="#000"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/btnIrAgendamento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/event_24dp_e3e3e3_fill0_wght400_grad0_opsz24"
+            android:gravity="center"
+            android:text="Agendamento"
+            android:textSize="12sp"
+            android:backgroundTint="#F8F8F8"
+            android:drawableTint="#000"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/btnPerfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/person_24dp_e3e3e3_fill0_wght400_grad0_opsz24"
+            android:gravity="center"
+            android:text="Perfil"
+            android:textSize="12sp"
+            android:backgroundTint="#F8F8F8"
+            android:drawableTint="#000"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+</LinearLayout>

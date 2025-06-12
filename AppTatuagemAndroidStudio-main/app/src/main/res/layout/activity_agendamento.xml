@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!-- Conteúdo rolável -->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Tipo de Tatuagem -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Agendamento"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tipo de Tatuagem"
+            android:textColor="@color/black" />
+
+        <Spinner
+            android:id="@+id/spinnerTipo"
+            android:layout_width="198dp"
+            android:layout_height="34dp"
+            android:backgroundTint="#232121"
+            android:backgroundTintMode="src_in" />
+
+        <EditText
+            android:id="@+id/editOutroTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Se outro, especifique aqui"
+            android:visibility="gone" />
+
+        <!-- Descrição da ideia -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Descreva sua ideia"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/editDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/black"
+            android:gravity="top"
+            android:inputType="textMultiLine" />
+
+        <!-- Upload de Referências -->
+
+        <Button
+            android:id="@+id/btnUploadImagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Upload de Referências" />
+
+        <ImageView
+            android:id="@+id/imagePreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Localização -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Local do corpo para tatuagem"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/editLocalizacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: braço, perna, costas" />
+
+        <!-- Tamanho estimado -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tamanho estimado (em cm)"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/editTamanho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: 10x15 cm" />
+
+        <!-- Data preferida -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Data preferida"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/editData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:hint="Clique para selecionar data" />
+
+        <!-- Contato -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Contato (telefone ou e-mail)"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/editContato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex: (99) 99999-9999 ou email@email.com" />
+
+        <!-- Botão Enviar -->
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#4CAF50"
+            android:text="Enviar Solicitação" />
+    </LinearLayout>
+</ScrollView>
+
+<!-- Botões fixos na parte inferior -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="bottom"
+    android:background="#F8F8F8"
+    android:paddingTop="8dp">
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/home_24dp_e3e3e3_fill0_wght400_grad0_opsz24"
+        android:gravity="center"
+        android:text="Home"
+        android:textSize="12sp"
+        android:backgroundTint="#F8F8F8"
+        android:drawableTint="#000"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/btnIrAgendamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/event_24dp_e3e3e3_fill0_wght400_grad0_opsz24"
+        android:gravity="center"
+        android:text="Agendamento"
+        android:textSize="12sp"
+        android:backgroundTint="#F8F8F8"
+        android:drawableTint="#000"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/btnPerfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/person_24dp_e3e3e3_fill0_wght400_grad0_opsz24"
+        android:gravity="center"
+        android:text="Perfil"
+        android:textSize="12sp"
+        android:backgroundTint="#F8F8F8"
+        android:drawableTint="#000"
+        android:background="@android:color/transparent"/>
+</LinearLayout>
+
+</LinearLayout>
+
+
+
